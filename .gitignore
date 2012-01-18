@@ -1,0 +1,7 @@
+# git ignore file for HBaseProtobuf
+# Create M. Massenzio, 2012-01-17
+
+/.settings
+/target
+/bin
+*.pb.*
