@@ -44,9 +44,11 @@ public class Main {
   public Main(String user, String id) {
     this.user = user;
     this.id = id;
+    log.debug("Accessing HBase for user " + user + " [" + id + "]");
     this.success = false;
     Configuration conf = HBaseConfiguration.create();
     try {
+      log.debug("Accessing HBase table " + Constants.TABLE);
       table = new HTable(conf, Constants.TABLE);
       if (table == null) {
         log.error(Messages.getString("htable_null"));
