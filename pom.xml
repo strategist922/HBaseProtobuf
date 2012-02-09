@@ -5,21 +5,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>HBaseProtobuf</name>
   <description>HBase persistence for protobufs</description>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>br.com.ingenieux</groupId>
-        <artifactId>beanstalk-maven-plugin</artifactId>
-        <version>0.2.5</version>
-        <configuration>
-          <s3Bucket>HBaseProtobuf</s3Bucket>
-          <applicationName>HBaseProtobuf</applicationName>
-          <!-- will save as s3://[bucket name]/[artifactId]/artifactId-version-TIMESTAMP.war -->
-          <s3Key>${project.artifactId}/${project.build.finalName}-${maven.build.timestamp}.war</s3Key>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
   <dependencies>
   	<dependency>
   		<groupId>org.easymock</groupId>
